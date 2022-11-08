@@ -22,11 +22,11 @@ contract OmniCounter is NonblockingLzApp {
 
     function incrementCounter(uint16 _dstChainId) public payable {
         _lzSend(
-            _dstChainId,
-            bytes(""),
-            payable(msg.sender),
-            address(0x0),
-            bytes(""),
+            _dstChainId, // destination chainId
+            bytes(""), // abi.encoded()'ed bytes
+            payable(msg.sender), // refund address
+            address(0x0), // 'zroPaymentAddress' unused for this
+            bytes(""), // txParameters
             msg.value
         );
     }

@@ -1,0 +1,17 @@
+{
+    "goerli": {
+        "endpoint": "0xbfD2135BFfbb0B5378b56643c2Df8a87552Bfa23",
+        "chainId": "10121",
+        "contract": "0x"
+    },
+    "bsc_test": {
+        "endpoint": "0x6Fcb97553D41516Cb228ac03FdC8B9a0a9df04A1",
+        "chainId": "10102",
+        "contract": "0x"
+    },
+    "aptos_test": {
+        "endpoint": "0x1759cc0d3161f1eb79f65847d4feb9d1f74fb79014698a23b16b28b9cd4c37e3",
+        "chainId": "10108",
+        "contract": "0x"
+    }
+}

@@ -1,8 +1,10 @@
 const dotenv = require("dotenv");
+dotenv.config();
 require("@nomiclabs/hardhat-waffle");
 require("hardhat-gas-reporter");
 require("solidity-coverage");
-dotenv.config();
+require("./tasks");
+
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -63,6 +65,20 @@ module.exports = {
       forking: {
         url: `https://mainnet.infura.io/v3/XXXXXXXXXXXXXXXXXXXX`,
       },
+    },
+    goerli: {
+      chainId: 5,
+      url: "https://eth-goerli.g.alchemy.com/v2/demo",
+      accounts: [process.env.DEPLOYER_PRIVKEY],
+    },
+    bsc_test: {
+      chainId: 97,
+      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+      accounts: [process.env.DEPLOYER_PRIVKEY],
+    },
+    aptos_test: {
+      chainId: 9999,
+      url: "https://aptos",
     },
   },
   gasReporter: {
